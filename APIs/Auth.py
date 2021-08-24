@@ -16,21 +16,29 @@ def signup():
     username = mysqlclean(request_data.get('username'))
     email = mysqlclean(request_data.get('email'))
     password = mysqlclean(request_data.get('password'))
-    a = Signup()
-    if a.createuser(username, email, password):
-        data={
-            'Message': 'Signup Success',
-            'Username': username,
-            'Email': email,
 
-        }
-        return json.dumps(data),200
+    if email and password and username:
+        a = Signup()
+        if a.createuser(username, email, password):
+            data={
+                'Message': 'Signup Success',
+                'Username': username,
+                'Email': email,
+
+            }
+            return json.dumps(data),200
+        else:
+            data = {
+                'Error':'Signup Failure',
+                'Message':'Email already exists',
+            }
+            return json.dumps(data),409
     else:
-        data = {
-            'Error':'Signup Failure',
-            'Message':'Email already exists',
+        data={
+            'Error':'Invalid Request'
         }
-        return json.dumps(data),409
+        return json.dumps(data),400
+
 
 
 @auth_api.route('/auth/login',methods=['POST'])
