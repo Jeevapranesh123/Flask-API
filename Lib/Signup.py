@@ -1,6 +1,6 @@
 import pymongo
 
-client = pymongo.MongoClient("mongodb+srv://jeeva:1ckQA77SKxHhWiD7@api.matbk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://jeeva:1ckQA77SKxHhWiD7@cluster0.kwjqz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 db=client.API
 Users=db.Users
 
