@@ -54,8 +54,9 @@ def login():
             return json.dumps(data),200
 
         except Exception as e:
+            x=str(e)
             data={
-                'Error':e
+                'Error':x
             }
             return json.dumps(data),403
 

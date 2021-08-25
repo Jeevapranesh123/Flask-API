@@ -1,7 +1,7 @@
 import pymongo
 import secrets
 import time
-client = pymongo.MongoClient('mongodb+srv://jeeva:DOCKoC2kvdHVHmzT@flask-api.atefn.mongodb.net/test')
+client = pymongo.MongoClient("mongodb+srv://jeeva:1ckQA77SKxHhWiD7@api.hwuwg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 db = client.API
 Users = db.Users
 Sessions = db.Sessions
