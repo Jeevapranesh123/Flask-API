@@ -1,8 +1,0 @@
-Flask
-Flask-RESTful
-Flask-JWT
-Flask-SQLAlchemy
-uwsgi
-psycopg2
-pymongo
-dnspython
