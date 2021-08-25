@@ -9,10 +9,6 @@ auth_api = Blueprint('auth_api',__name__)
 def mysqlclean(a):
     return a
 
-@auth_api.route('/')
-def home():
-    return '<h1>Home</h1>'
-
 
 @auth_api.route('/auth/signup',methods=['POST'])
 def signup():
