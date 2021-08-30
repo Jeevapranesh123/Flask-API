@@ -68,6 +68,7 @@ def login():
         }
         return json.dumps(data),400
 
+
 @auth_api.route('/auth/isvalid', methods=['POST'])
 def is_valid():
     request_data = request.form
