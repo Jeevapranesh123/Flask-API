@@ -1,5 +1,4 @@
 Flask
-flask_limiter
 uwsgi
 psycopg2
 pymongo
