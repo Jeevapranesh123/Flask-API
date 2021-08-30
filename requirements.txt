@@ -1,7 +1,5 @@
 Flask
-Flask-RESTful
-Flask-JWT
-Flask-SQLAlchemy
+flask_limiter
 uwsgi
 psycopg2
 pymongo
