@@ -3,7 +3,6 @@ from flask import Blueprint,request
 from Lib.Signup import *
 from Lib.Auth import Auth
 import json
-from core import limiter
 auth_api = Blueprint('auth_api',__name__)
 
 
@@ -35,7 +34,6 @@ def signup():
 
 
 @auth_api.route('/auth/login',methods=['POST'])
-@limiter.limit("5 per minute")
 def login():
 
     request_data = request.form

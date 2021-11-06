@@ -1,6 +1,6 @@
 import pymongo
 
-client = pymongo.MongoClient("mongodb+srv://jeeva:1ckQA77SKxHhWiD7@api.hwuwg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+client = pymongo.MongoClient('localhost')
 db=client.API
 Users=db.Users
 
@@ -10,6 +10,8 @@ class Signup:
     def __init__(self):
         pass
 
+
+    # @staticmethod
     def createuser(self, username,email, password):
         data = {
             'username':username,
@@ -17,7 +19,7 @@ class Signup:
             'Password': password
         }
         a = Users.find()
-        # print(a)
+
         for i in a:
             # print(i)
             if i['email'] == email:
